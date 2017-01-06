@@ -15,8 +15,11 @@ end
 structure Ogirochok :> OGIROCHOK =
 struct
     fun reportResult(description, result) =
-        (print((if result then "OK: " else "FAIL: ") ^ description ^ "\n");
-        result)
+        let val msg = (if result then "OK: " else "FAIL: ") ^ description
+        in
+            print(msg ^ "\n");
+            result
+        end
 
     (* Check that got and expected are equal. *)
     fun assertEqual(description, got, expected) =
