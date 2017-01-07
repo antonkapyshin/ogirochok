@@ -28,6 +28,9 @@ val it = false : bool
 In source code:
 
 ```sml
-val test_assertNotEqual_1_and_2 = Ogirochok.assertNotEqual("1 and 2", 1, 2)
-val test_assertNotEqual_2_and_1 = Ogirochok.assertNotEqual("2 and 1", 2, 1)
+val () = Ogirochok.main([
+    Ogirochok.assertNotEqual("1 and 2", 1, 2),
+    Ogirochok.assertNotEqual("2 and 1", 2, 1)
+    (* ... *)
+])
 ```
