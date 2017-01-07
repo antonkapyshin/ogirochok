@@ -1,0 +1,10 @@
+language: python
+python:
+        - "3.5"
+script: ./build/test
+install: make
+addons:
+        apt:
+                packages:
+                        - mlton
+                        - make
