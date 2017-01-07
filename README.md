@@ -1,3 +1,7 @@
+# Ogirochok
+
+[![Build Status](https://travis-ci.org/elliptica/ogirochok.svg?branch=master)](https://travis-ci.org/elliptica/ogirochok)
+
 ## What is this?
 
 This is very tiny testing framework in SML.
