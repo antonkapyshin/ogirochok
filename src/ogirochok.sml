@@ -26,17 +26,17 @@ struct
 
     (* Check that got and expected are equal. *)
     fun assertEqual(description, got, expected) =
-        reportResult(description, got = expected)
+        reportResult("equal: " ^ description, got = expected)
 
     (* Check that got and expected are not equal. *)
     fun assertNotEqual(description, got, expected) =
-        reportResult(description, got <> expected)
+        reportResult("not equal: " ^ description, got <> expected)
 
     fun assertTrue(description, got) =
-        reportResult(description, got)
+        reportResult("true: " ^ description, got)
 
     fun assertFalse(description, got) =
-        reportResult(description, not (got))
+        reportResult("false: " ^ description, not (got))
 
     fun main [] = OS.Process.exit OS.Process.failure    (* No cases is strange. *)
       | main (results: bool list) =

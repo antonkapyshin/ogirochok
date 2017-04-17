@@ -12,8 +12,8 @@ val () = Ogirochok.main([
     Ogirochok.assertNotEqual("[1, 2] <> [1, 3]", [1, 2], [1, 3]),
     Ogirochok.assertNotEqual("[1, 2] <> [1, 2, 3]", [1, 2], [1, 2, 3]),
     Ogirochok.assertNotEqual("[1, 2] <> [3, 4]", [1, 2], [3, 4]),
-    Ogirochok.assertTrue("true is true", true),
+    Ogirochok.assertTrue("true", true),
     Ogirochok.assertTrue("1 = 1", 1 = 1),
-    Ogirochok.assertFalse("false is false", false),
+    Ogirochok.assertFalse("false", false),
     Ogirochok.assertFalse("1 = 2", 1 = 2)
 ])
