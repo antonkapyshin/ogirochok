@@ -9,6 +9,8 @@ signature OGIROCHOK =
 sig
     val assertEqual: string * ''a * ''a -> bool
     val assertNotEqual: string * ''a * ''a -> bool
+    val assertTrue: string * bool -> bool
+    val assertFalse: string * bool -> bool
     val main: bool list -> unit
 end
 
@@ -29,6 +31,12 @@ struct
     (* Check that got and expected are not equal. *)
     fun assertNotEqual(description, got, expected) =
         reportResult(description, got <> expected)
+
+    fun assertTrue(description, got) =
+        reportResult(description, got)
+
+    fun assertFalse(description, got) =
+        reportResult(description, not (got))
 
     fun main [] = OS.Process.exit OS.Process.failure    (* No cases is strange. *)
       | main (results: bool list) =
