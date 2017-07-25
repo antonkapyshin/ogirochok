@@ -10,6 +10,7 @@ sig
     val assertEqual: string * ''a * ''a -> bool
     val assertNotEqual: string * ''a * ''a -> bool
     val assertTrue: string * bool -> bool
+    val assert: string * bool -> bool
     val assertFalse: string * bool -> bool
     val main: bool list -> unit
 end
@@ -34,6 +35,10 @@ struct
 
     fun assertTrue(description, got) =
         reportResult("true: " ^ description, got)
+
+    (* Just an alias to assertTrue function. *)
+    fun assert(description, got) =
+        assertTrue(description, got)
 
     fun assertFalse(description, got) =
         reportResult("false: " ^ description, not (got))
